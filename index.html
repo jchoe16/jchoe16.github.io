@@ -34,6 +34,7 @@
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
+	color: #5375F0;
 }
     #home {
 	position: absolute;
@@ -82,15 +83,14 @@
 }
 
  #artwork1 {
-		
-background-color: #ADD2E5;
-margin-top: 66px;
-margin-left: 55px;
-width: 350px;
-height: 488px;
+	background-color: #FFFFFF;
+	margin-top: 66px;
+	margin-left: 55px;
+	width: 350px;
+	height: 488px;
 }
     #artwork2 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 margin-left: 419px;
 margin-top: -488px;
 width: 350px;
@@ -98,7 +98,7 @@ height: 350px;
 
 }
     #artwork3 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 margin-left: 783px;
 width: 350px;
 height: 350px;
@@ -106,7 +106,7 @@ margin-top: -350px;
 
 }
     #artwork4 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 margin-left: 418px;
 margin-top: 13px;
 width: 715px;
@@ -114,28 +114,28 @@ height: 250px;
 
 }
     #artwork5 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 width: 350px;
 height: 350px;
 margin-left: 55px;
 margin-top: -110px;
 }
     #artwork6 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 margin-left: 418px;
 margin-top: -225px;
 width: 350px;
 height: 225px;
 }
     #artwork7 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 margin-left: 783px;
 width: 350px;
 margin-top: -224px;
 height: 452px;
 }
     #artwork8 {
-background-color: #D3C9AD;
+background-color: #FFFFFF;
 margin-top: -215px;
 margin-left: 55px;
 width: 714px;
@@ -156,6 +156,58 @@ border-style: solid;
 	font-size: 11.9pt;
 }
 
+.artwork {
+	position: relative;
+	width: 50%;	
+}
+
+.image {
+	opacity: 1;
+	transition: .5s ease;
+	backface-visibility: hidden;	
+}
+
+.artwork:hover .image {
+	opacity: 0.3;	
+}
+
+.artwork:hover .middle {
+	opacity: 1;
+}
+
+.text {
+	color: #000000;
+	font-size: 23px;
+	text-align: center;
+	transform: translate(50%, 50%);
+	font-family: playfair-display;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-100%, -100%);
+	-ms-transform: translate(-100%, -100%)
+}
+
+.tabs a{
+	color: #000000;
+	text-decoration: none;
+}
+
+.currentTab a{
+	color: #5375F0;
+	text-decoration: none;
+	/* font-weight: 900; */
+}
+body {
+	background-color: #ffffff;	
+}
 </style>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -172,18 +224,57 @@ border-style: solid;
  <div id="name">JOYCE CHOE</div>
  <div id="job">visual // graphic designer </div>
  
- <div id="home"><a href="home.html">home</a></div>
-      <div id="work">work</div>
- <div id="about">about</div>
+ <div id="home" class="tabs"><a href="home.html">home</a></div>
+ <div id="work" class="currentTab"><a href="index.html">work</a></div>
+ <div id="about" class="tabs"><a href="AboutMe.html">about</a></div>
  <!--<div class= "container-fluid" id="artworkcontainer"> -->
-   		  <div id="artwork1"><img src="images/MusicFinal1.png" width="350" height="488" onclick="window.open('WorkDescriptionPage.html');" alt=""/></div>
-          <div id="artwork2">artwork2</div>
-          <div id="artwork3"><img src="images/BachFinal1.png" width="350" height="350" alt=""/></div>
-          <div id="artwork4"><img src="images/OlympicFinal1.png" width="715" height="250" alt=""/></div>
-          <div id="artwork5"><img src="images/IcecreamFinal1.png" width="350" height="350" alt=""/></div>
-          <div id="artwork6">artwork6</div>
-          <div id="artwork7"><img src="images/AlphabetFinal1.png" width="350" height="452" alt=""/></div>
-          <div id="artwork8">artwork8</div>
+   		  <div id="artwork1" class="artwork"><img class="image" src="images/MusicFinal1.png" width="350" height="488" onclick="parent.location='WorkDescriptionPage.html';" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">Old Town School <br/>of Music</div>
+          	</div>
+          </div>
+
+          <div id="artwork2" class="artwork"><img class="image" src="images/Eero.png" width="350" height="350" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">Eero Saarinen Publication</div>
+          	</div>
+          </div>
+
+          <div id="artwork3" class="artwork"><img class="image" src="images/NewCenturyFinal1.png" width="350" height="350" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">New Century Schoolbook Accordion Fold</div>
+          	</div>
+          </div>
+
+          <div id="artwork4" class="artwork"><img class="image" src="images/OlympicFinal1.png" width="715" height="250" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">Mexico Olympic Poster</div>
+          	</div>
+          </div>
+
+          <div id="artwork5" class="artwork"><img class="image" src="images/IcecreamFinal1.png" width="350" height="350" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">How to Make an <br/> Ice-cream Sundae</div>
+          	</div>
+          </div>
+
+          <div id="artwork6" class="artwork"><img class="image" src="images/AmalgamFinal1.png" width="350" height="225" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">Amalgam</div>
+          	</div>
+          </div>
+
+          <div id="artwork7" class="artwork"><img class="image" src="images/AlphabetFinal1.png" width="350" height="452" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">Easy as A-B-C</div>
+          	</div>
+          </div>
+
+          <div id="artwork8" class="artwork"><img class="image" src="images/BachMusic.png" width="714" height="216" alt=""/>
+          	<div class="middle">
+          		<div class="text" onclick="parent.location='WorkDescriptionPage.html';">Bach Series</div>
+          	</div>
+          </div>
       <!-- </div> -->
       
       <br/>
