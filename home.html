@@ -34,6 +34,7 @@
 	font-style: normal;
 	font-weight: 700;
 	font-size: 28px;
+	color: #5375F0;
 }
     #home {
 	position: absolute;
@@ -170,6 +171,18 @@
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
+
+
+.tabs a{
+	color: #000000;
+	text-decoration: none;
+}
+
+.currentTab a{
+	color: #5375F0;
+	text-decoration: none;
+	font-weight: 900;
+}
 </style>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -185,9 +198,9 @@
   <div id="logo"><img src="images/logof.png" width="60" height="60" alt=""/></div>
   <div id="name">JOYCE CHOE</div>
   <div id="job">visual // graphic designer </div>
-  <div id="home">home</div>
-  <div id="work"><a href="index.html">work</a></div>
-  <div id="about">about</div>
+  <div id="home" class="currentTab"><a href="home.html">home</a></div>
+  <div id="work" class="tabs"><a href="index.html">work</a></div>
+  <div id="about" class="tabs"><a href="AboutMe.html">about</a></div>
   
   <br/>
   <br/>
@@ -196,17 +209,26 @@
   <div class="slideshow-container">
 
 	<div class="mySlides fade">
-  		<img src="images/1.jpg" style="width:100%">
+  		<img src="images/Slideshow1.png" style="width:100%">
 	</div>
 
 	<div class="mySlides fade">
-  		<img src="images/2.jpg" style="width:100%">
+  		<img src="images/Slideshow2.png" style="width:100%">
 	</div>
 
 	<div class="mySlides fade">
-  		<img src="images/practice.jpg" style="width:100%">
+  		<img src="images/Slideshow3.png" style="width:100%">
+	</div>
+    
+    <div class="mySlides fade">
+  		<img src="images/Slideshow4.png" style="width:100%">
 	</div>
 
+	<div class="mySlides fade">
+  		<img src="images/Slideshow5.png" style="width:100%">
+	</div>
+
+	
 </div>
 <br>
 
@@ -214,6 +236,8 @@
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
 </div>
 
 <script>
